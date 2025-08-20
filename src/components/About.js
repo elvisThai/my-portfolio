@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { FaGithub, FaLinkedin, FaEnvelope, FaTwitter } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaEnvelope} from 'react-icons/fa';
 import './About.css';
 
 const About = () => {
@@ -24,11 +24,6 @@ const About = () => {
       name: "Email",
       url: "mailto:elvis.thai@outlook.com",
     },
-    {
-      icon: <FaTwitter />,
-      name: "Twitter",
-      url: "https://twitter.com/elvisthai",
-    }
   ];
 
   // Function to handle scroll and update active section
@@ -84,7 +79,7 @@ const About = () => {
             <h1 className="name">Elvis Thai</h1>
             <h2 className="title">Computer Science Student</h2>
             <p className="bio">
-              I build accessible, pixel-perfect digital experiences for the web.
+            I love building, learning, and solving problems on and off the bouldering wall :D 
             </p>
           </div>
 
@@ -129,13 +124,13 @@ const About = () => {
               and playing video games such as Valorant, where I rank in the top 0.1% of players.
             </p>
             <p>
-              I'm constantly learning and exploring new technologies for fun and love to build projects 
-              to help people in different ways. My journey in computer science began with a curiosity about how technology can solve real-world problems.
+              I've always been fascinated by the intersection of creativity and logic that programming provides. 
+              I am currently exploring <strong>cloud technologies</strong> and <strong>DevOps practices</strong> to understand how to deploy 
+              and maintain applications at scale.
             </p>
             <p>
-              I've always been fascinated by the intersection of creativity and logic that programming provides. 
-              Currently exploring <strong>cloud technologies</strong> and <strong>DevOps practices</strong> to understand how to deploy 
-              and maintain applications at scale.
+              I'm constantly learning and exploring new technologies for fun and love to build projects 
+              to help people in different ways. 
             </p>
           </motion.div>
         </section>
