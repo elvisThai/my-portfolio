@@ -144,9 +144,9 @@ const About = () => {
             <h2>Experience</h2>
             <div className="experience-item">
               <div className="experience-header">
-                <span className="experience-period">2023 — PRESENT</span>
+                <span className="experience-period">May 2025 — August 2025</span>
                 <div className="experience-title">
-                  <h3>Computer Science Student · Western University</h3>
+                  <h3>Data Analyst Co-op · Western University</h3>
                   <a href="https://uwo.ca" target="_blank" rel="noopener noreferrer" className="company-link">
                     <span>Western University</span>
                     <span className="arrow">↗</span>
