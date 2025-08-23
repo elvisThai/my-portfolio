@@ -159,30 +159,10 @@ const About = () => {
                 participating in coding competitions and hackathons.
               </p>
               <div className="tech-stack">
-                <span className="tech-tag">JavaScript</span>
+                <span className="tech-tag">PowerBi</span>
                 <span className="tech-tag">Python</span>
-                <span className="tech-tag">React</span>
-                <span className="tech-tag">Node.js</span>
-              </div>
-            </div>
-
-            <div className="experience-item">
-              <div className="experience-header">
-                <span className="experience-period">2022 — 2023</span>
-                <div className="experience-title">
-                  <h3>Freelance Web Developer</h3>
-                </div>
-              </div>
-              <p>
-                Built responsive websites and web applications for small businesses and startups. 
-                Collaborated with clients to understand requirements and deliver pixel-perfect solutions 
-                that enhance user experience and drive business growth.
-              </p>
-              <div className="tech-stack">
-                <span className="tech-tag">HTML</span>
-                <span className="tech-tag">CSS</span>
-                <span className="tech-tag">JavaScript</span>
-                <span className="tech-tag">WordPress</span>
+                <span className="tech-tag">Excel</span>
+                <span className="tech-tag">PowerAutomate</span>
               </div>
             </div>
           </motion.div>
