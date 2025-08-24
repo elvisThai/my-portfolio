@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import About from './components/About';
+import Portfolio from './components/Portfolio';
 import './App.css';
 
 function App() {
@@ -14,14 +14,14 @@ function App() {
     return (
       <div className="loading-screen">
         <div className="loading-spinner"></div>
-        <p>Loading Portfolio...</p>
+        <p>Loading..</p>
       </div>
     );
   }
 
   return (
     <div className="App">
-      <About />
+      <Portfolio />
     </div>
   );
 }
