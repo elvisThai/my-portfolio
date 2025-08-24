@@ -115,7 +115,7 @@
 .main-content {
   margin-left: 800px;
   flex: 1;
-  padding: 100px 60px 50px 60px;
+  padding: 75px 60px 50px 60px;
   max-width: calc(100vw - 800px);
   display: flex;
   flex-direction: column;
@@ -123,17 +123,22 @@
 }
 
 .content-section {
-  margin-bottom: 100px;
+  margin-bottom: 120px;
   width: 100%;
   max-width: 600px;
   margin-right: 200px;
+  padding-top: 20px;
+}
+
+.content-section:last-child {
+  margin-bottom: 60px;
 }
 
 .content-section h2 {
   font-size: 2.5rem;
   font-weight: 700;
   color: #ccd6f6;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
   position: relative;
 }
 
@@ -162,7 +167,11 @@
 
 /* Experience Items */
 .experience-item {
-  margin-bottom: 50px;
+  margin-bottom: 40px;
+}
+
+.experience-item:last-child {
+  margin-bottom: 0;
 }
 
 .experience-header {
@@ -207,7 +216,11 @@
 
 /* Project Items */
 .project-item {
-  margin-bottom: 50px;
+  margin-bottom: 40px;
+}
+
+.project-item:last-child {
+  margin-bottom: 0;
 }
 
 .project-header {
@@ -266,7 +279,7 @@
 
   
   .main-content {
-    padding: 80px 40px 50px 40px;
+    padding: 75px 40px 50px 40px;
     max-width: calc(100vw - 560px);
   }
   
