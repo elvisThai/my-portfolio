@@ -1,5 +1,59 @@
-/* Projects component styles - minimal since most styling is handled by Portfolio.css */
+/* Project Items */
+.project-item {
+  margin-bottom: 40px;
+}
 
-.projects-section {
-  /* Basic container styling - most styling comes from Portfolio.css */
+.project-item:last-child {
+  margin-bottom: 0;
+}
+
+.project-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.project-header h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #ccd6f6;
+}
+
+.project-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: #64ffda;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.project-link:hover {
+  color: #64ffda;
+}
+
+/* Tech Stack Tags */
+.tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.tech-tag {
+  background-color: rgba(100, 255, 218, 0.1);
+  color: #64ffda;
+  padding: 6px 14px;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  border: 1px solid rgba(100, 255, 218, 0.2);
+  transition: all 0.3s ease;
+}
+
+.tech-tag:hover {
+  background-color: rgba(100, 255, 218, 0.2);
+  transform: translateY(-1px);
 }

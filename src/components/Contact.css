@@ -1,13 +1,6 @@
 .contact-section {
-  background-color: #1a1a1a;
+  background-color: #0a192f;
   padding: 0;
-}
-
-.contact-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 4rem;
-  align-items: start;
 }
 
 .contact-form {
@@ -15,6 +8,8 @@
   padding: 2rem;
   border-radius: 12px;
   border: 1px solid #333;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 .contact-form h3 {
@@ -77,113 +72,36 @@
   transform: translateY(-2px);
 }
 
-.contact-info {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-}
-
-.contact-info h3 {
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: #ffffff;
-  margin-bottom: 1.5rem;
-}
-
-.contact-item {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  padding: 1rem;
-  background-color: #2a2a2a;
-  border-radius: 8px;
-  border: 1px solid #333;
-  transition: all 0.3s ease;
-}
-
-.contact-item:hover {
-  border-color: #64ffda;
-  transform: translateY(-2px);
-}
-
-.contact-icon {
-  font-size: 1.2rem;
-  color: #64ffda;
-  min-width: 20px;
-}
-
-.contact-details h4 {
-  color: #ffffff;
-  font-weight: 500;
-  margin-bottom: 0.25rem;
-}
-
-.contact-details p,
-.contact-details a {
-  color: #a0a0a0;
-  text-decoration: none;
-  font-size: 0.9rem;
-  transition: color 0.3s ease;
-}
-
-.contact-details a:hover {
-  color: #64ffda;
-}
-
-.social-links-contact {
-  display: flex;
-  gap: 1rem;
-  margin-top: 1rem;
-}
-
-.social-link {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 40px;
-  height: 40px;
-  background-color: #1a1a1a;
-  color: #a0a0a0;
-  border-radius: 50%;
-  text-decoration: none;
-  font-size: 1.1rem;
-  border: 1px solid #333;
-  transition: all 0.3s ease;
-}
-
-.social-link:hover {
-  color: #64ffda;
-  border-color: #64ffda;
-  transform: translateY(-2px);
+.submit-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
 }
 
 .success-message {
-  background-color: #1a1a1a;
+  background-color: rgba(100, 255, 218, 0.1);
   color: #64ffda;
   padding: 1rem;
   border-radius: 6px;
   border: 1px solid #64ffda;
-  margin-top: 1rem;
+  margin-bottom: 1.5rem;
   text-align: center;
+  font-weight: 500;
 }
 
-@media (max-width: 1024px) {
-  .contact-container {
-    grid-template-columns: 1fr;
-    gap: 3rem;
-  }
+.error-message {
+  background-color: rgba(255, 100, 100, 0.1);
+  color: #ff6b6b;
+  padding: 1rem;
+  border-radius: 6px;
+  border: 1px solid #ff6b6b;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-weight: 500;
 }
 
 @media (max-width: 768px) {
   .contact-form {
     padding: 1.5rem;
-  }
-  
-  .contact-item {
-    padding: 0.75rem;
-  }
-  
-  .social-links-contact {
-    justify-content: center;
   }
 }
