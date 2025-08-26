@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import Portfolio from './components/Portfolio';
-import CursorGlow from './components/CursorGlow';
 import './App.css';
 
 function App() {
@@ -22,7 +21,6 @@ function App() {
 
   return (
     <div className="App">
-      <CursorGlow />
       <Portfolio />
     </div>
   );
