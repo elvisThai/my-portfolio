@@ -1,10 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { 
-  FaHtml5, FaCss3Alt, FaJs, FaReact, FaNodeJs, FaPython, 
+  FaHtml5, FaCss3Alt, FaJs, FaReact, FaPython, 
   FaJava, FaGitAlt, FaDocker, FaAws 
 } from 'react-icons/fa';
-import { SiMongodb, SiExpress, SiPostgresql, SiTypescript } from 'react-icons/si';
+import { SiMongodb, SiPostgresql, SiSpringboot, SiFlask } from 'react-icons/si';
 import './Skills.css';
 
 const Skills = () => {
@@ -12,10 +12,9 @@ const Skills = () => {
     {
       title: "Programming Languages",
       skills: [
-        { name: "JavaScript", icon: <FaJs />, level: 85, color: "#f7df1e" },
-        { name: "Python", icon: <FaPython />, level: 80, color: "#3776ab" },
-        { name: "Java", icon: <FaJava />, level: 75, color: "#007396" },
-        { name: "TypeScript", icon: <SiTypescript />, level: 70, color: "#3178c6" }
+        { name: "Python", icon: <FaPython />, level: 85, color: "#3776ab" },
+        { name: "Java", icon: <FaJava />, level: 85, color: "#007396" },
+        { name: "JavaScript", icon: <FaJs />, level: 70, color: "#f7df1e" }
       ]
     },
     {
@@ -23,14 +22,14 @@ const Skills = () => {
       skills: [
         { name: "HTML5", icon: <FaHtml5 />, level: 90, color: "#e34f26" },
         { name: "CSS3", icon: <FaCss3Alt />, level: 85, color: "#1572b6" },
-        { name: "React", icon: <FaReact />, level: 80, color: "#61dafb" }
+        { name: "React", icon: <FaReact />, level: 75, color: "#61dafb" }
       ]
     },
     {
       title: "Backend & Databases",
       skills: [
-        { name: "Node.js", icon: <FaNodeJs />, level: 75, color: "#339933" },
-        { name: "Express.js", icon: <SiExpress />, level: 70, color: "#000000" },
+        { name: "Spring Boot", icon: <SiSpringboot />, level: 75, color: "#6db33f" },
+        { name: "Flask", icon: <SiFlask />, level: 70, color: "#000000" },
         { name: "MongoDB", icon: <SiMongodb />, level: 65, color: "#47a248" },
         { name: "PostgreSQL", icon: <SiPostgresql />, level: 60, color: "#336791" }
       ]
@@ -38,9 +37,9 @@ const Skills = () => {
     {
       title: "Tools & Technologies",
       skills: [
-        { name: "Git", icon: <FaGitAlt />, level: 85, color: "#f05032" },
+        { name: "Git", icon: <FaGitAlt />, level: 90, color: "#f05032" },
         { name: "Docker", icon: <FaDocker />, level: 60, color: "#2496ed" },
-        { name: "AWS", icon: <FaAws />, level: 55, color: "#ff9900" }
+        { name: "AWS", icon: <FaAws />, level: 60, color: "#ff9900" }
       ]
     }
   ];
