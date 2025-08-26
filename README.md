@@ -1,3 +1,5 @@
+## About
+
 My personal portfolio website built with React.js showcasing my skills, experience, and projects as a Computer Science student. Inspired by https://brittanychiang.com/ :D
 
 ## 🛠️ Technologies Used
