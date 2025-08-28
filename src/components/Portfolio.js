@@ -220,7 +220,7 @@ const Portfolio = () => {
               and playing video games like Valorant, where I rank in the top 0.1% of players😎.
             </p>
             <p>
-            I’ve always been fascinated by the different possibilities programming offers for problem solving. 
+            I’ve always been fascinated by programming and its limitless possibilities. There are really no boundaries to what can be created!
               I am currently exploring <strong>cloud technologies</strong> and <strong>DevOps practices</strong> to understand how to deploy 
               and maintain applications at scale.
             </p>
