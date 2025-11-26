@@ -217,7 +217,7 @@ const Portfolio = () => {
             <p>
               I'm a Computer Science student at <strong>Western University</strong> passionate about full stack development, 
               AI, and data. Outside of school and coding, I enjoy bouldering indoors (and occasionally outdoors..) 
-              and playing video games like Valorant, where I rank in the top 0.1% of players😎.
+              and playing video games like Valorant, where I rank in the top 0.05% of players😎.
             </p>
             <p>
             I’ve always been fascinated by programming and its limitless possibilities. There are really no boundaries to what can be created!
