@@ -13,11 +13,19 @@ const Contact = () => {
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState(null); 
+  const [submitError, setSubmitError] = useState('');
+
+  const publicKey = process.env.REACT_APP_EMAILJS_PUBLIC_KEY;
+  const serviceId = process.env.REACT_APP_EMAILJS_SERVICE_ID;
+  const templateId = process.env.REACT_APP_EMAILJS_TEMPLATE_ID;
+  const isEmailConfigured = Boolean(publicKey && serviceId && templateId);
 
   // Initialize EmailJS
   useEffect(() => {
-    emailjs.init(process.env.REACT_APP_EMAILJS_PUBLIC_KEY); 
-  }, []);
+    if (publicKey) {
+      emailjs.init(publicKey);
+    }
+  }, [publicKey]);
 
   const handleChange = (e) => {
     setFormData({
@@ -30,44 +38,43 @@ const Contact = () => {
     e.preventDefault();
     setIsSubmitting(true);
     setSubmitStatus(null);
+    setSubmitError('');
+
+    if (!isEmailConfigured) {
+      setSubmitStatus('error');
+      setSubmitError('Email service is not configured yet.');
+      setIsSubmitting(false);
+      return;
+    }
+
+    const templateParams = {
+      name: formData.name,
+      from_name: formData.name,
+      email: formData.email,
+      from_email: formData.email,
+      title: formData.subject,
+      subject: formData.subject,
+      message: formData.message,
+    };
     
     try {
-      console.log('Sending email with data:', {
-        service_id: process.env.REACT_APP_EMAILJS_SERVICE_ID,
-        template_id: process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
-        template_params: {
-          from_name: formData.name,
-          from_email: formData.email,
-          subject: formData.subject,
-          message: formData.message,
-        }
-      });
-      
       const result = await emailjs.send(
-        process.env.REACT_APP_EMAILJS_SERVICE_ID,
-        process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
-        {
-          from_name: formData.name,
-          from_email: formData.email,
-          subject: formData.subject,
-          message: formData.message,
-        },
-        process.env.REACT_APP_EMAILJS_PUBLIC_KEY
+        serviceId,
+        templateId,
+        templateParams,
+        publicKey
       );
-      
-      console.log('EmailJS result:', result);
-      
+
       if (result.status === 200) {
         setSubmitStatus('success');
         setFormData({ name: '', email: '', subject: '', message: '' });
       } else {
         setSubmitStatus('error');
+        setSubmitError(result.text || 'Unexpected EmailJS response.');
       }
     } catch (error) {
-      console.error('Email send error details:', error);
-      console.error('Error message:', error.message);
-      console.error('Error text:', error.text);
       setSubmitStatus('error');
+      setSubmitError(error?.text || error?.message || 'Unable to send the message.');
     } finally {
       setIsSubmitting(false);
     }
@@ -115,7 +122,7 @@ const Contact = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.3 }}
             >
-              Failed to send message. Please try again or contact me directly.
+              Failed to send message. {submitError || 'Please try again or contact me directly.'}
             </motion.div>
           )}
           
