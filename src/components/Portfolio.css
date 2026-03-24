@@ -1,6 +1,12 @@
 /* Main App Container */
 .app-container {
-  display: flex;
+  display: grid;
+  grid-template-columns: minmax(280px, 430px) minmax(0, 600px);
+  justify-content: center;
+  column-gap: clamp(64px, 8vw, 140px);
+  width: min(1400px, 100%);
+  margin: 0 auto;
+  padding: 75px clamp(24px, 5vw, 48px) 50px;
   min-height: 100vh;
   background-color: #0a192f;
   color: #ccd6f6;
@@ -10,13 +16,12 @@
 
 /* Left Sidebar */
 .sidebar {
-  position: fixed;
+  position: sticky;
   top: 0;
-  left: 350px;
-  width: 430px;
+  width: 100%;
   height: 100vh;
   background-color: #0a192f;
-  padding: 100px 0;
+  padding: 25px 0 40px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -24,7 +29,7 @@
 }
 
 .sidebar-content {
-  padding: 0 50px;
+  padding: 0;
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -113,20 +118,18 @@
 
 /* Main Content Area */
 .main-content {
-  margin-left: 800px;
-  flex: 1;
-  padding: 75px 60px 50px 60px;
-  max-width: calc(100vw - 800px);
+  min-width: 0;
+  width: 100%;
+  max-width: 600px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .content-section {
   margin-bottom: 120px;
   width: 100%;
   max-width: 600px;
-  margin-right: 200px;
   padding-top: 20px;
 }
 
@@ -167,20 +170,18 @@
 
 /* Responsive Design */
 @media (max-width: 1440px) {
-  .sidebar {
-    left: 250px;
-    width: 350px;
+  .app-container {
+    grid-template-columns: minmax(260px, 360px) minmax(0, 520px);
+    column-gap: clamp(56px, 6vw, 100px);
   }
   
   .main-content {
-    margin-left: 600px;
-    padding: 75px 40px 50px 40px;
-    max-width: calc(100vw - 600px);
+    max-width: 520px;
   }
   
   .content-section {
     max-width: 500px;
-    margin-right: 100px;
+    width: 100%;
   }
   
   .name {
@@ -188,25 +189,23 @@
   }
   
   .sidebar-content {
-    padding: 0 30px;
+    padding: 0;
   }
 }
 
 @media (max-width: 1366px) {
-  .sidebar {
-    left: 200px;
-    width: 300px;
+  .app-container {
+    grid-template-columns: minmax(240px, 320px) minmax(0, 470px);
+    column-gap: clamp(48px, 5vw, 80px);
   }
   
   .main-content {
-    margin-left: 500px;
-    padding: 75px 30px 50px 30px;
-    max-width: calc(100vw - 500px);
+    max-width: 470px;
   }
   
   .content-section {
     max-width: 450px;
-    margin-right: 50px;
+    width: 100%;
   }
   
   .name {
@@ -226,7 +225,7 @@
   }
   
   .sidebar-content {
-    padding: 0 25px;
+    padding: 0;
   }
   
   .nav-item.active::before {
@@ -236,7 +235,10 @@
 
 @media (max-width: 1024px) {
   .app-container {
+    display: flex;
     flex-direction: column;
+    width: 100%;
+    padding: 0;
   }
   
   .sidebar {
@@ -259,7 +261,7 @@
   
   .content-section {
     max-width: 100%;
-    margin-right: 0;
+    width: 100%;
     margin-bottom: 80px;
   }
   
